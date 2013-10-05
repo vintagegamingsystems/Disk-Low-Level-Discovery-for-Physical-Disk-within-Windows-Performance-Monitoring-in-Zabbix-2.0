@@ -1,4 +1,4 @@
-Disk Discovery Windows Zabbix
+Disk Low Level Physical Disk Discovery for Windows Performance Monitoring in Zabbix
 ==========================
 
 This Powershell script returns JSON for Windows Perfomance Monitoring within Zabbix.
