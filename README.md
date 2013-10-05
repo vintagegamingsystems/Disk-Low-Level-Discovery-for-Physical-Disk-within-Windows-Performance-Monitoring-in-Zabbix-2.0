@@ -5,7 +5,7 @@ This Powershell script returns JSON for Windows Perfomance Monitoring within Zab
 
 This powershell script discovers the logical disks letters and partition index number for a windows machine. The returned values can be used to enable Zabbix to autodiscover all the individual disks in the following format: 
 
-<partition number> <drive letter>: 
+[partition number] [drive letter]:
 
 0 C:
 
