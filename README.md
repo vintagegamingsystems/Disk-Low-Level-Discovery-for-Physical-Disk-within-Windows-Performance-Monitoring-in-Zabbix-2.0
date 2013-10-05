@@ -33,7 +33,9 @@ Our script returns JSON (JavaScript Object Notation) it will look like this.
   ]
 }
 
-You must create a create a UserParameter somewhere in the zabbix_agent.win.conf or zabbix_agent.conf file. It depends on what you named the file initially. 
+You must create a UserParameter somewhere in the zabbix_agent.win.conf or zabbix_agent.conf file. It depends on what you named the file initially. 
+
+UserParameter=windowsPhysicalDisk.Discovery, powershell -File c:\diskdisc.ps1
 
 Then restart the agent.
 
