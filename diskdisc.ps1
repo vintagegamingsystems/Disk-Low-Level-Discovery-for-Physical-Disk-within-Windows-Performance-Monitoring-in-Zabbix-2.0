@@ -1,4 +1,4 @@
-# Thanks to Tobias who created "Get Drive ID and Drive Leter" for which I modified to return the correct JSON output.
+# Many thanks to Tobias who created "Get Drive ID and Drive Leter" for which I modified to return the correct JSON output.
 # http://powershell.com/cs/media/p/7924.aspx
 
 function Combine-Object { 
