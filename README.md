@@ -37,9 +37,9 @@ You must create a create a UserParameter somewhere in the zabbix_agent.win.conf 
 
 Then restart the agent.
 
-When you make an item you must use the defined macro in the JSON object, {#DISKNUMLET}.
+When you make a prototype item you must use the defined macro in the JSON object, in this case {#DISKNUMLET}.
 
-It will look something this this
+It will look something this:
 
 perf_counter[\234(#DISKNUMLET)\208]
 
