@@ -41,7 +41,7 @@ Then restart the agent.
 
 When you make a prototype item you must use the defined macro in the JSON object, in this case {#DISKNUMLET}.
 
-It will look something this:
+It will look something like this:
 
 perf_counter[\234(#DISKNUMLET)\208]
 
