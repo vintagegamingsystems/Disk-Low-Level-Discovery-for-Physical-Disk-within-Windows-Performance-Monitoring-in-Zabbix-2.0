@@ -9,6 +9,8 @@ This powershell script discovers the logical disks letters and partition index n
 
 0 C:
 
+Note: If there are multiple partitions on a physical disk, this script will only return the first drive letter that it finds on that physical disk. We want to create items and monitor drives like something like 0 C: and 1 E:  We do not want to create items for 0 C: and 0 E: on the same host as this will throw an error. 
+
 In order to monitor the physical disks for Windows performance monitoring within Zabbix as user must set up items for each individual disk. This is cumbersome as you must know the drive letter and index number for each Windows machine. Normal item syntax for physical disks within the Windows performance monitor in Zabbix looks like the following:
 
 perf_counter[\234(0 C:)\208]
@@ -22,6 +24,8 @@ The conversion values are located in the registry.
 Run regedit from the command line on your windows machine. Then navigate to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Perflib\009. 
 
 I would personally copy the contents of the file and put it into a text document if you want to reference them later. The numeric representation of the Windows Performance Monitoring metrics is better if you work in an environment where the machines may have different locales (i.e. Languages) because the Windows Perfomance Monitoring strings change based on locale.
+
+The most relevant numeric representation is \234.  
 
 Our script returns JSON (JavaScript Object Notation) it will look like this.
 
@@ -44,6 +48,8 @@ When you make a prototype item you must use the defined macro in the JSON object
 It will look something like this:
 
 perf_counter[\234(#DISKNUMLET)\208]
+
+If you add a physical disk to the computer and the populated discovered items become unsupported, restart the agent. They should become supported and begin transmitting metrics once again. 
 
 For addional Zabbix Windows Performance Monitoring, please visit the following website:
 
