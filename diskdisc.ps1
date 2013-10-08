@@ -43,7 +43,7 @@ function Combine-Object {
 	write-host " `"data`":["
 	foreach ($objItem in $colItems)
 		{$line= "{ `"{#DISKLET}`" : `"" + $objItem.Name + "`",`n  `"{#DISKNUMLET}`" : `"" + $objItem.DiskIndex + " " + $objItem.Name + "`" },"
-		#Allows only letter drives with unique Diskindex values to be discovered. 
+		#Allows only letter drives with unique DiskIndex values to be discovered. If the DiskIndex is unique then it executes the write-host $line, otherwise it skips that iteration.
 		if ($objItem.DiskIndex -ne $oldObjItemDiskIndex)
 			{
 			write-host $line
