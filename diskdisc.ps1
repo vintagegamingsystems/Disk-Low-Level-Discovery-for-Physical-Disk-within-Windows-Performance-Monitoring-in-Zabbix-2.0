@@ -44,7 +44,13 @@ function Combine-Object {
 	foreach ($objItem in $colItems)
 		{
 		$line= "{ `"{#DISKNUMLET}`" : `"" + $objItem.DiskIndex + " " + $objItem.Name + "`" },"
-		write-host $line
+		#Allows only letter drives with unique Diskindex values to be discovered. 
+		if ($objItem.DiskIndex -ne $oldObjItemDiskIndex)
+			{
+			write-host $line
+			}
+		# Keeps track of index number	
+		$oldObjItemDiskIndex = $objItem.DiskIndex
 		}
 	write-host
 	write-host " ]"
