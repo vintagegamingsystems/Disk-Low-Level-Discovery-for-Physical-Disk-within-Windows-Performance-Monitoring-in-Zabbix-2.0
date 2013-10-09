@@ -31,9 +31,9 @@ Our script returns JSON (JavaScript Object Notation) it will look like this.
 
 {
   "data":[
-  
-  { "{#DISKNUMLET}":"0 C:" },
-  
+  { "{#DISKLET}":"C:",
+    "{#DISKNUMLET}":"0 C:" },
+      
   ]
 }
 
