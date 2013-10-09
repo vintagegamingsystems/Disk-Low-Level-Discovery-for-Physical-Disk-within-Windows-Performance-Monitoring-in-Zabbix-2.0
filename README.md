@@ -51,6 +51,50 @@ perf_counter[\234({#DISKNUMLET})\208]
 
 If you add a physical disk to the computer and the populated discovered items become unsupported, restart the agent. They should become supported and begin transmitting metrics once again. 
 
+The included template has 20 or so prototype items within the discovery rule. It monitors the following Windows performance items:
+
+% Disk  Read Time
+
+% Disk Time
+
+% Disk Write Time
+
+% Idle Time
+
+Avg. Disk Bytes/Read 
+
+Avg. Disk Bytes/Transfer
+
+Avg. Disk Bytes/Write
+
+Avg. Disk Queue Length
+
+Avg. Disk Read Queue Length
+
+Avg. Disk sec/Read
+
+Avg. Disk sec/Transfer
+
+Avg. Disk sec/Write
+
+Avg. Disk Write Queue Length
+
+Current Disk Queue Length
+
+Disk Bytes/sec
+
+Disk Reads/sec
+
+Disk Transfer/sec
+
+Disk Write Bytes/sec
+
+Disk Writes/sec
+
+Read Bytes/sec 
+
+Split IO/Sec
+
 For addional Zabbix Windows Performance Monitoring, please visit the following website:
 
 https://www.zabbix.com/documentation/2.0/manual/config/items/perfcounters
