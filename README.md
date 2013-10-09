@@ -3,9 +3,9 @@ Disk Low Level Discovery for Physical Disk within Windows Performance Monitoring
 
 This Powershell script returns JSON for Windows Perfomance Monitoring within Zabbix.
 
-This powershell script discovers the logical disks letters and partition index number for a windows machine. The returned values can be used to enable Zabbix to autodiscover all the individual disks in the following format: 
+This powershell script discovers the logical disks letters and physical disk index number for a windows machine. The returned values can be used to enable Zabbix to autodiscover all the individual disks in the following format: 
 
-[partition number] [drive letter]:
+[disk number] [drive letter]:
 
 0 C:
 
