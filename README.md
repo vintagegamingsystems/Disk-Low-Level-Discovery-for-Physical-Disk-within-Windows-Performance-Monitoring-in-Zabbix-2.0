@@ -39,7 +39,7 @@ Our script returns JSON (JavaScript Object Notation) it will look like this.
 
 You must create a UserParameter somewhere in the zabbix_agent.win.conf or zabbix_agent.conf file. It depends on what you named the file initially. 
 
-UserParameter=windowsPhysicalDisk.Discovery, powershell -File c:\diskdisc.ps1
+UserParameter=windowsPhysicalDisk.Discovery, powershell -NoProfile -ExecutionPolicy Bypass -File c:\diskdisc.ps1
 
 Then restart the agent.
 
@@ -51,7 +51,7 @@ perf_counter[\234({#DISKNUMLET})\208]
 
 If you add a physical disk to the computer and the populated discovered items become unsupported, restart the agent. They should become supported and begin transmitting metrics once again. 
 
-The included template has 20 or so prototype items within the discovery rule. It monitors the following Windows performance items:
+The included template has 21 prototype items within the discovery rule. It monitors the following Windows performance items:
 
 % Disk  Read Time
 
