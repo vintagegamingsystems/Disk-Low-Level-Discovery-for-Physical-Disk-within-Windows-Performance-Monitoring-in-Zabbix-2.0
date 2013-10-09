@@ -9,7 +9,7 @@ This powershell script discovers the logical disks letters and physical disk ind
 
 0 C:
 
-Note: If there are multiple partitions on a physical disk, this script will only return the first drive letter that it finds on that physical disk. We want to create items and monitor drives like something like 0 C: and 1 E:  We do not want to create items for 0 C: and 0 E: on the same host as this will throw an error. 
+Note: If there are multiple partitions on a physical disk, this script will only return the first drive letter that it finds on that physical disk. We want to create items and monitor drives like something like 0 C: and 1 E:  We do not want to create items for 0 C: and 0 E: on the same host as this will throw an error. And who wants to monitor the same physical disk twice, that would redundant.
 
 In order to monitor the physical disks for Windows performance monitoring within Zabbix as user must set up items for each individual disk. This is cumbersome as you must know the drive letter and index number for each Windows machine. Normal item syntax for physical disks within the Windows performance monitor in Zabbix looks like the following:
 
