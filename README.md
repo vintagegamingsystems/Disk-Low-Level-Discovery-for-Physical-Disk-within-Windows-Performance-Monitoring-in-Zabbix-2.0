@@ -39,7 +39,7 @@ Our script returns JSON (JavaScript Object Notation) it will look like this.
 
 You must create a UserParameter somewhere in the zabbix_agent.win.conf or zabbix_agent.conf file. It depends on what you named the file initially. 
 
-UserParameter=windowsdisk.Discovery, powershell -NoProfile -ExecutionPolicy Bypass -File c:\diskdisc.ps1
+UserParameter=windowsdisk.discovery, powershell -NoProfile -ExecutionPolicy Bypass -File c:\diskdisc.ps1
 
 Then restart the agent.
 
