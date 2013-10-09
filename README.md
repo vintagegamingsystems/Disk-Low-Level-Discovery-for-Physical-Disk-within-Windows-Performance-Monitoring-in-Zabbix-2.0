@@ -47,7 +47,7 @@ When you make a prototype item you must use the defined macro in the JSON object
 
 It will look something like this:
 
-perf_counter[\234(#DISKNUMLET)\208]
+perf_counter[\234({#DISKNUMLET})\208]
 
 If you add a physical disk to the computer and the populated discovered items become unsupported, restart the agent. They should become supported and begin transmitting metrics once again. 
 
