@@ -1,7 +1,7 @@
 Disk Low Level Discovery for Physical Disk within Windows Performance Monitoring in Zabbix 2.0
 ==========================
 
-Note: This software is completely ready yet because the items will become unsupported if you have more than one partition on a disk. I am working on that right now.
+Note: This software is NOT completely ready yet because the items will become unsupported if you have more than one partition on a disk. I am working on that right now.
 
 This Powershell script returns JSON for Windows Perfomance Monitoring within Zabbix.
 
