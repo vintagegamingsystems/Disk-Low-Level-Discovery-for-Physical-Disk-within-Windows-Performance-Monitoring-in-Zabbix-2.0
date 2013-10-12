@@ -35,7 +35,7 @@ function Combine-Object {
             if ($logicaldisk -ne $null) {   
 	    Combine-Object $logicaldisk $partition
 	    } 
-        } | select-Object Name, DiskIndex | sort-object diskindex
+        } | select-Object Name, DiskIndex |sort-object index
     } 
 	 Get-Drives
     	#Puts the output of the Get-Drives function in the variable $colItems 
