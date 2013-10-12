@@ -37,7 +37,7 @@ function Combine-Object {
 	    } 
         } | select-Object DiskIndex, Name | sort-object -Property DeviceID
     } 
-	 Get-Drives
+	#Get-Drives
     	#Puts the output of the Get-Drives function in the variable $colItems 
 	$colItems = Get-Drives
 	#Populates hashtable
