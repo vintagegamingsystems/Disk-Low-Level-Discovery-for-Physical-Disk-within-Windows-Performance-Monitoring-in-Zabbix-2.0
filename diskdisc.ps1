@@ -35,7 +35,7 @@ function Combine-Object {
             if ($logicaldisk -ne $null) {   
 	    Combine-Object $logicaldisk $partition
 	    } 
-        } | select-Object DiskIndex, Name | sort-object -Property name, ws –Descending
+        } | select-Object DiskIndex, Name | sort-object -Property DeviceID
     } 
 	 Get-Drives
     	#Puts the output of the Get-Drives function in the variable $colItems 
@@ -45,8 +45,8 @@ function Combine-Object {
 		{
 		$hashTable+=,@($objPull.DiskIndex,$objPull.Name)
 		}	
-	write-host $hashTable
-	[array]::reverse($hashTable)
+	#write-host $hashTable
+	#[array]::reverse($hashTable)
 	#Restructures data structure.
 	foreach ($hash in $hashTable)
 		{
