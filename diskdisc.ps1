@@ -63,14 +63,13 @@ function Combine-Object {
 		
 		$oldIndex = $diskIndex
 		}
-	#Write JSON	
+	#Write JSON
 	write-host "{"
 	write-host " `"data`":[`n"
 	foreach ( $blah in $newHashtable)
 		{
 		$diskIndexNew = $blah[0]
 		$driveIndexNew = $blah[1]
-		write-host $blah
 		$line= "{ `"{#DISKLET}`" : `"" + $diskIndexNew[0] + "`",`n  `"{#DISKNUMLET}`" : `"" + $diskIndexNew + "`" },"
 		write-host $line
 		}
