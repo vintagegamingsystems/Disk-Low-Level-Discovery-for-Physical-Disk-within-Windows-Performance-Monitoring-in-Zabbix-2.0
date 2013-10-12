@@ -35,15 +35,13 @@ function Combine-Object {
             if ($logicaldisk -ne $null) {   
 	    Combine-Object $logicaldisk $partition 
 	    } 
-        } | select-Object Name, DiskIndex
+        } | select-Object Name, DiskIndex, VolumeName | sort-object VolumeName
     } 
 	
 	#New Hashtable 
      	#$array2 = New-Object 'object[,]' 0,0
     	#Puts the output of the Get-Drives function in the variable $colItems 
 	$colItems = Get-Drives
-	#Sorts hashtable by DiskIndex (numerically ascending)
-	$colItems = $colItems|sort-object DiskIndex
 	#Populates hashtable
 	foreach ($objPull in $colItems)
 		{
