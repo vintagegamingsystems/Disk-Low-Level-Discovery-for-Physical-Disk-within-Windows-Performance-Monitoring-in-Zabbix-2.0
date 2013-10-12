@@ -60,7 +60,6 @@ function Combine-Object {
 			}
 		else
 			{
-			$driveLetter = $driveLetter
 			$newHashTable[$diskIndex][0]+=$driveLetter
 			}
 		
