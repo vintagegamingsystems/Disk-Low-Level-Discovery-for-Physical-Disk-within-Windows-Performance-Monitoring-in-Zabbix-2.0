@@ -49,7 +49,7 @@ function Combine-Object {
 		{
 		$hashTable+=,@($objPull.DiskIndex,$objPull.Name)
 		}	
-	#Restructures data structure.
+	#Rebuilds array.
 	foreach ($hash in $hashTable)
 		{
 		$diskIndex=$hash[0]
