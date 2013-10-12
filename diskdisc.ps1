@@ -30,16 +30,14 @@ function Combine-Object {
     function Get-Drives { 
         Get-WmiObject Win32_DiskPartition | 
         ForEach-Object { 
-            $partition = $_ 
+            $partition = $_ |sort-object name
             $logicaldisk = $partition.psbase.GetRelated('Win32_LogicalDisk') 
             if ($logicaldisk -ne $null) {   
-	    Combine-Object $logicaldisk $partition 
+	    Combine-Object $logicaldisk $partition
 	    } 
-        } | select-Object Name, DiskIndex, VolumeName | sort-object VolumeName
+        } | select-Object Name, DiskIndex | sort-object diskindex
     } 
-	
-	#New Hashtable 
-     	#$array2 = New-Object 'object[,]' 0,0
+	 Get-Drives
     	#Puts the output of the Get-Drives function in the variable $colItems 
 	$colItems = Get-Drives
 	#Populates hashtable
@@ -47,7 +45,7 @@ function Combine-Object {
 		{
 		$hashTable+=,@($objPull.DiskIndex,$objPull.Name)
 		}	
-	#Rebuilds array.
+	#Restructures data structure.
 	foreach ($hash in $hashTable)
 		{
 		$diskIndex=$hash[0]
@@ -63,7 +61,7 @@ function Combine-Object {
 		
 		$oldIndex = $diskIndex
 		}
-	#Write JSON
+		
 	write-host "{"
 	write-host " `"data`":[`n"
 	foreach ( $blah in $newHashtable)
