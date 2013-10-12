@@ -37,19 +37,45 @@ function Combine-Object {
 	    } 
         } | select-Object Name, DiskIndex
     } 
-     
-    	$colItems = Get-Drives 
-    	write-host "{"
-	write-host " `"data`":["
-	foreach ($objItem in $colItems)
-		{$line= "{ `"{#DISKLET}`" : `"" + $objItem.Name + "`",`n  `"{#DISKNUMLET}`" : `"" + $objItem.DiskIndex + " " + $objItem.Name + "`" },"
-		#Allows only letter drives with unique DiskIndex values to be discovered. If the DiskIndex is unique then it executes the write-host $line, otherwise it skips that iteration.
-		if ($objItem.DiskIndex -ne $oldObjItemDiskIndex)
+	
+	#New Hashtable 
+     	#$array2 = New-Object 'object[,]' 0,0
+    	#Puts the output of the Get-Drives function in the variable $colItems 
+	$colItems = Get-Drives
+	#Sorts hashtable by DiskIndex (numerically ascending)
+	$colItems = $colItems|sort-object DiskIndex
+	#Populates hashtable
+	foreach ($objPull in $colItems)
+		{
+		$hashTable+=,@($objPull.DiskIndex,$objPull.Name)
+		}	
+	#Restructures data structure.
+	foreach ($hash in $hashTable)
+		{
+		$diskIndex=$hash[0]
+		$driveLetter=$hash[1]
+		if($diskIndex -gt $oldIndex)
 			{
-			write-host $line
+			$newHashTable+=,@(,($diskIndex, $driveLetter))
 			}
-		# Keeps track of index number	
-		$oldObjItemDiskIndex = $objItem.DiskIndex
+		else
+			{
+			$driveLetter = $driveLetter
+			$newHashTable[$diskIndex][0]+=$driveLetter
+			}
+		
+		$oldIndex = $diskIndex
+		}
+	#Write JSON	
+	write-host "{"
+	write-host " `"data`":[`n"
+	foreach ( $blah in $newHashtable)
+		{
+		$diskIndexNew = $blah[0]
+		$driveIndexNew = $blah[1]
+		write-host $blah
+		$line= "{ `"{#DISKLET}`" : `"" + $diskIndexNew[0] + "`",`n  `"{#DISKNUMLET}`" : `"" + $diskIndexNew + "`" },"
+		write-host $line
 		}
 	write-host
 	write-host " ]"
