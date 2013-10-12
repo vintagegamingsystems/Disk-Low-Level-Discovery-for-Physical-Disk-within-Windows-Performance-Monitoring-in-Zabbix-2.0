@@ -30,12 +30,12 @@ function Combine-Object {
     function Get-Drives { 
         Get-WmiObject Win32_DiskPartition | 
         ForEach-Object { 
-            $partition = $_ |sort-object name
+            $partition = $_ |sort-object index
             $logicaldisk = $partition.psbase.GetRelated('Win32_LogicalDisk') 
             if ($logicaldisk -ne $null) {   
 	    Combine-Object $logicaldisk $partition
 	    } 
-        } | select-Object Name, DiskIndex |sort-object index
+        } | select-Object Name, DiskIndex | sort-object diskindex
     } 
 	 Get-Drives
     	#Puts the output of the Get-Drives function in the variable $colItems 
