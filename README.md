@@ -1,7 +1,6 @@
 Disk Low Level Discovery for Physical Disk within Windows Performance Monitoring in Zabbix 2.0
 ==========================
-
-Note: This software should work as long as there are no logical drives in the first disk. I am not sure how to fix this just yet.
+Rewritten and working great.
 
 This powershell script discovers the logical disks letters and physical disk index number for a windows machine. The returned values can be used to enable Zabbix to autodiscover all the individual disks in the following format: 
 
