@@ -46,7 +46,7 @@
                     <description>Discovers disks for performance monitoring.</description>
                     <item_prototypes>
                         <item_prototype>
-                            <name>% Disk  Read Time {#DISKLET} Drive</name>
+                            <name>% Disk  Read Time {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -81,7 +81,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>% Disk Time {#DISKLET} Drive</name>
+                            <name>% Disk Time {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -116,7 +116,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>% Disk Write Time {#DISKLET} Drive</name>
+                            <name>% Disk Write Time {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -151,7 +151,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>% Idle Time {#DISKLET} Drive</name>
+                            <name>% Idle Time {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -186,7 +186,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Avg. Disk Bytes/Read {#DISKLET} Drive</name>
+                            <name>Avg. Disk Bytes/Read {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -221,7 +221,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Avg. Disk Bytes/Transfer {#DISKLET} Drive</name>
+                            <name>Avg. Disk Bytes/Transfer {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -256,7 +256,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Avg. Disk Bytes/Write {#DISKLET} Drive</name>
+                            <name>Avg. Disk Bytes/Write {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -291,7 +291,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Avg. Disk Queue Length {#DISKLET}</name>
+                            <name>Avg. Disk Queue Length {#DISKNUMLET}</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -326,7 +326,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Avg. Disk Read Queue Length {#DISKLET} Drive</name>
+                            <name>Avg. Disk Read Queue Length {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -361,7 +361,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Avg. Disk sec/Read {#DISKLET} Drive</name>
+                            <name>Avg. Disk sec/Read {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>1</multiplier>
@@ -396,7 +396,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Avg. Disk sec/Transfer {#DISKLET} Drive</name>
+                            <name>Avg. Disk sec/Transfer {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>1</multiplier>
@@ -431,7 +431,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Avg. Disk sec/Write {#DISKLET} Drive</name>
+                            <name>Avg. Disk sec/Write {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>1</multiplier>
@@ -466,7 +466,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Avg. Disk Write Queue Length {#DISKLET}</name>
+                            <name>Avg. Disk Write Queue Length {#DISKNUMLET}</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -501,7 +501,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Current Disk Queue Length {#DISKLET} Drive</name>
+                            <name>Current Disk Queue Length {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -536,7 +536,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Disk Bytes/sec {#DISKLET} Drive</name>
+                            <name>Disk Bytes/sec {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -571,7 +571,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Disk Reads/sec {#DISKLET} Drive</name>
+                            <name>Disk Reads/sec {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -606,7 +606,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Disk Transfer/sec {#DISKLET} Drive</name>
+                            <name>Disk Transfer/sec {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -641,7 +641,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Disk Write Bytes/sec {#DISKLET} Drive</name>
+                            <name>Disk Write Bytes/sec {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -676,7 +676,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Disk Writes/sec {#DISKLET} Drive</name>
+                            <name>Disk Writes/sec {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -711,7 +711,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Read Bytes/sec {#DISKLET} Drive</name>
+                            <name>Read Bytes/sec {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -746,7 +746,7 @@
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
-                            <name>Split IO/Sec {#DISKLET} Drive</name>
+                            <name>Split IO/Sec {#DISKNUMLET} Drive</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
