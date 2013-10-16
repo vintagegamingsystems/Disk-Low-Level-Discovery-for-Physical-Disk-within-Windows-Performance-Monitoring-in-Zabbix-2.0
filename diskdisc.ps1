@@ -4,7 +4,7 @@ write-host "{"
 	write-host " `"data`":[`n"
 	foreach ($perfDrives in $drives)
 		{
-		$line= "{ `"{#DISKNUMLET}`" : `"" + $perfDrives.matches + "`" },"
+		$line= "{ `"{#DISKNUMLET}`" : `"" + $perfDrives.names + "`" },"
 		write-host $line
 		}
 	write-host
