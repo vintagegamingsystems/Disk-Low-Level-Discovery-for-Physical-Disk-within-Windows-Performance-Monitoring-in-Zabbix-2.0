@@ -9,7 +9,7 @@ foreach ($perfDrives in $drives)
         $line= "{ `"{#DISKNUMLET}`" : `"" + $perfDrives.Name + "`" },"
         write-host $line
     }
-    elseif ($idx -eq $drives.Count)
+    elseif ($idx -ge $drives.Count)
     {
     $line= "{ `"{#DISKNUMLET}`" : `"" + $perfDrives.Name + "`" }"
     write-host $line
