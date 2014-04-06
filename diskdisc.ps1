@@ -4,7 +4,11 @@ write-host "{"
 	write-host " `"data`":[`n"
 	foreach ($perfDrives in $drives)
 		{
-		$line= "{ `"{#DISKNUMLET}`" : `"" + $perfDrives.Name + "`" },"
+		if ($drives[-1] -ne $perfDrives) {
+		        $line= "{ `"{#DISKNUMLET}`" : `"" + $perfDrives.Name + "`" },"
+	        } else {
+            		$line= "{ `"{#DISKNUMLET}`" : `"" + $perfDrives.Name + "`" }"
+        	}
 		write-host $line
 		}
 	write-host
